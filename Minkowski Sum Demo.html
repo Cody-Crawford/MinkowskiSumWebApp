@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<title>Minkowski Sum of Convex Robot and Obstacle</title>
+<style>
+  :root {
+    --canvas-bg: #f8f9fa;
+    --panel-bg: #ffffff;
+    --border: #dee2e6;
+    --text: #212529;
+    --text-muted: #6c757d;
+    --robot-fill: rgba(66, 133, 244, 0.25);
+    --robot-stroke: #4285f4;
+    --obstacle-fill: rgba(234, 67, 53, 0.25);
+    --obstacle-stroke: #ea4335;
+    --mink-fill: rgba(52, 168, 83, 0.2);
+    --mink-stroke-robot: #4285f4;
+    --mink-stroke-obstacle: #ea4335;
+    --normal-robot: #4285f4;
+    --normal-obstacle: #ea4335;
+    --accent: #4285f4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--canvas-bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    padding: 10px 16px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .control-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .control-group label {
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  select, input[type="range"] {
+    font-size: 13px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 6px;
+    background: #fff;
+  }
+
+  input[type="range"] {
+    width: 200px;
+    accent-color: var(--accent);
+  }
+
+  .toggle-btn {
+    padding: 4px 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .toggle-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  .toggle-btn:hover:not(.active) {
+    background: #f1f3f5;
+  }
+
+  .canvas-container {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+  }
+
+  canvas {
+    display: block;
+    width: 100%;
+    cursor: default;
+  }
+
+  .legend {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    border: 1.5px solid;
+  }
+
+  .info-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
+    max-width: 900px;
+  }
+
+  .play-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .play-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.15s;
+  }
+
+  .play-btn:hover {
+    background: #f1f3f5;
+  }
+</style>
+</head>
+<body>
+
+<h1>Minkowski Sum of Convex Robot and Obstacle</h1>
+<p class="subtitle">Drag vertices to reshape. The green region is the configuration-space obstacle.</p>
+
+<div class="controls">
+  <div class="control-group">
+    <label>View:</label>
+    <select id="viewMode">
+      <option value="static">Static</option>
+      <option value="animate">Move Around Minkowski</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>Robot edges:</label>
+    <select id="robotEdges">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3" selected="">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>Obstacle edges:</label>
+    <select id="obstacleEdges">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5" selected="">5</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <button class="toggle-btn" id="toggleNormals">Show Normals</button>
+  </div>
+  <div class="control-group" id="animControls" style="display:none;">
+    <div class="play-controls">
+      <button class="play-btn" id="playBtn" title="Play/Pause">▶</button>
+    </div>
+    <input type="range" id="animSlider" min="0" max="1000" value="0">
+  </div>
+</div>
+
+<div class="canvas-container">
+  <canvas id="mainCanvas"></canvas>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-swatch" style="background:rgba(66,133,244,0.25);border-color:#4285f4;"></div> Robot</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:rgba(234,67,53,0.25);border-color:#ea4335;"></div> Obstacle</div>
+    <div class="legend-item"><div class="legend-swatch" style="background:rgba(52,168,83,0.2);border-color:#34a853;"></div> Minkowski Sum</div>
+  </div>
+</div>
+
+<p class="info-text">
+  The Minkowski sum (⊕) is computed by sorting edge normals of both polygons and walking them in angular order.
+  Blue edges on the sum come from the robot; red edges come from the obstacle. In animation mode the robot traces the boundary.
+</p>
+
+<script>
+// ===== GEOMETRY UTILITIES =====
+
+function cross2D(o, a, b) {
+  return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+}
+
+function dist(a, b) {
+  const dx = a[0] - b[0], dy = a[1] - b[1];
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+function normalize(v) {
+  const len = Math.sqrt(v[0] * v[0] + v[1] * v[1]);
+  return len < 1e-12 ? [0, 0] : [v[0] / len, v[1] / len];
+}
+
+function midpoint(a, b) {
+  return [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+}
+
+function centroid(poly) {
+  if (poly.length < 3) {
+    let sx = 0, sy = 0;
+    for (const p of poly) { sx += p[0]; sy += p[1]; }
+    return [sx / poly.length, sy / poly.length];
+  }
+  let area = 0, cx = 0, cy = 0;
+  for (let i = 0; i < poly.length; i++) {
+    const j = (i + 1) % poly.length;
+    const a = poly[i][0] * poly[j][1] - poly[j][0] * poly[i][1];
+    area += a;
+    cx += (poly[i][0] + poly[j][0]) * a;
+    cy += (poly[i][1] + poly[j][1]) * a;
+  }
+  area /= 2;
+  if (Math.abs(area) < 1e-12) {
+    let sx = 0, sy = 0;
+    for (const p of poly) { sx += p[0]; sy += p[1]; }
+    return [sx / poly.length, sy / poly.length];
+  }
+  cx /= (6 * area);
+  cy /= (6 * area);
+  return [cx, cy];
+}
+
+// Graham scan – returns convex hull in CCW order
+function grahamScan(points) {
+  if (points.length < 3) return points.slice();
+  const pts = points.map(p => p.slice());
+  // Find lowest y, then leftmost
+  let lowest = 0;
+  for (let i = 1; i < pts.length; i++) {
+    if (pts[i][1] < pts[lowest][1] || (pts[i][1] === pts[lowest][1] && pts[i][0] < pts[lowest][0])) {
+      lowest = i;
+    }
+  }
+  [pts[0], pts[lowest]] = [pts[lowest], pts[0]];
+  const pivot = pts[0];
+  const rest = pts.slice(1).sort((a, b) => {
+    const angA = Math.atan2(a[1] - pivot[1], a[0] - pivot[0]);
+    const angB = Math.atan2(b[1] - pivot[1], b[0] - pivot[0]);
+    if (Math.abs(angA - angB) > 1e-12) return angA - angB;
+    return dist(pivot, a) - dist(pivot, b);
+  });
+  const stack = [pivot];
+  for (const p of rest) {
+    while (stack.length > 1 && cross2D(stack[stack.length - 2], stack[stack.length - 1], p) <= 1e-12) {
+      stack.pop();
+    }
+    stack.push(p);
+  }
+  return stack;
+}
+
+// Ensure CCW ordering
+function ensureCCW(poly) {
+  let area = 0;
+  for (let i = 0; i < poly.length; i++) {
+    const j = (i + 1) % poly.length;
+    area += poly[i][0] * poly[j][1] - poly[j][0] * poly[i][1];
+  }
+  if (area < 0) poly.reverse();
+  return poly;
+}
+
+// outward normal of edge (p1 -> p2), CCW polygon
+function outwardNormal(p1, p2) {
+  const dx = p2[0] - p1[0], dy = p2[1] - p1[1];
+  return normalize([dy, -dx]); // rotate 90° clockwise = outward for CCW poly
+}
+
+// edge vector
+function edgeVector(p1, p2) {
+  return [p2[0] - p1[0], p2[1] - p1[1]];
+}
+
+// ===== MINKOWSKI SUM (sorted normals algorithm) =====
+
+function computeMinkowskiSum(robotHull, obstacleHull) {
+  if (robotHull.length < 2 || obstacleHull.length < 2) {
+    // Degenerate: single point + polygon or point + point
+    const rc = centroid(robotHull);
+    const oc = centroid(obstacleHull);
+    if (robotHull.length === 1 && obstacleHull.length === 1) {
+      return {
+        points: [[rc[0] + oc[0], rc[1] + oc[1]]],
+        edgeSources: [],
+        robotEdges: [],
+        obstacleEdges: []
+      };
+    }
+    // Point + polygon: translate polygon by the point
+    const single = robotHull.length === 1 ? robotHull[0] : obstacleHull[0];
+    const poly = robotHull.length === 1 ? obstacleHull : robotHull;
+    const src = robotHull.length === 1 ? 'obstacle' : 'robot';
+    const pts = poly.map(p => [p[0] + single[0], p[1] + single[1]]);
+    const srcs = pts.map(() => src);
+    return { points: pts, edgeSources: srcs, robotEdges: [], obstacleEdges: [] };
+  }
+
+  const robot = ensureCCW(robotHull.slice());
+  const obstacle = ensureCCW(obstacleHull.slice());
+
+  // Build edge info with normals and angles
+  function edgeInfos(poly, source) {
+    const infos = [];
+    for (let i = 0; i < poly.length; i++) {
+      const j = (i + 1) % poly.length;
+      const n = outwardNormal(poly[i], poly[j]);
+      const v = edgeVector(poly[i], poly[j]);
+      // For robot in Minkowski sum, we negate the edge vector (reflect robot)
+      const vec = source === 'robot' ? [-v[0], -v[1]] : v;
+      const nrm = source === 'robot' ? [-n[0], -n[1]] : n;
+      let angle = Math.atan2(nrm[1], nrm[0]);
+      infos.push({ normal: nrm, vector: vec, angle, source, idx: i, edge: [poly[i], poly[j]] });
+    }
+    return infos;
+  }
+
+  const robotInfos = edgeInfos(robot, 'robot');
+  const obstInfos = edgeInfos(obstacle, 'obstacle');
+  const allEdges = robotInfos.concat(obstInfos);
+  allEdges.sort((a, b) => {
+    if (Math.abs(a.angle - b.angle) > 1e-10) return a.angle - b.angle;
+    return a.source === 'robot' ? -1 : 1;
+  });
+
+  // Walk sorted edges to build Minkowski sum
+  // Starting point: robot vertex with min y (reflected) + obstacle vertex with min y
+  let rStart = 0;
+  for (let i = 1; i < robot.length; i++) {
+    if (robot[i][1] < robot[rStart][1] || (robot[i][1] === robot[rStart][1] && robot[i][0] < robot[rStart][0]))
+      rStart = i;
+  }
+  let oStart = 0;
+  for (let i = 1; i < obstacle.length; i++) {
+    if (obstacle[i][1] < obstacle[oStart][1] || (obstacle[i][1] === obstacle[oStart][1] && obstacle[i][0] < obstacle[oStart][0]))
+      oStart = i;
+  }
+
+  // Start point of Minkowski sum: reflect robot reference + obstacle reference
+  // Actually for Minkowski sum of -Robot and Obstacle: start = obstacle[oStart] - robot[rStart]
+  // But for configuration space obstacle: C-obstacle = obstacle ⊕ (-robot)
+  // Starting point: obstacle bottom + (-robot bottom)
+  let current = [obstacle[oStart][0] - robot[rStart][0], obstacle[oStart][1] - robot[rStart][1]];
+
+  // Find the starting position in sorted edges
+  // We need to find edges starting from the bottom-most angle
+  let startAngle = Math.atan2(-1, 0); // -π/2 (bottom)
+  let startIdx = 0;
+  let minAngleDiff = Infinity;
+  for (let i = 0; i < allEdges.length; i++) {
+    let diff = allEdges[i].angle - startAngle;
+    if (diff < 0) diff += 2 * Math.PI;
+    if (diff < minAngleDiff) {
+      minAngleDiff = diff;
+      startIdx = i;
+    }
+  }
+
+  const minkPoints = [current.slice()];
+  const edgeSources = [];
+  const robotEdgesList = [];
+  const obstacleEdgesList = [];
+
+  for (let k = 0; k < allEdges.length; k++) {
+    const idx = (startIdx + k) % allEdges.length;
+    const e = allEdges[idx];
+    const vec = e.source === 'robot' ? [-e.vector[0], -e.vector[1]] : e.vector;
+    const next = [current[0] + vec[0], current[1] + vec[1]];
+    const edgePair = [current.slice(), next.slice()];
+    edgeSources.push(e.source);
+    if (e.source === 'robot') {
+      robotEdgesList.push(edgePair);
+    } else {
+      obstacleEdgesList.push(edgePair);
+    }
+    current = next;
+    minkPoints.push(current.slice());
+  }
+
+  // Remove last point (same as first, closing the polygon)
+  minkPoints.pop();
+
+  return {
+    points: minkPoints,
+    edgeSources,
+    robotEdges: robotEdgesList,
+    obstacleEdges: obstacleEdgesList
+  };
+}
+
+// Discretize polygon boundary for animation
+function discretizePolygon(poly, step) {
+  if (poly.length < 2) return poly.slice();
+  const result = [];
+  for (let i = 0; i < poly.length; i++) {
+    const j = (i + 1) % poly.length;
+    const d = dist(poly[i], poly[j]);
+    if (d < 1e-12) {
+      result.push(poly[i].slice());
+      continue;
+    }
+    const nSteps = Math.max(1, Math.ceil(d / step));
+    for (let k = 0; k < nSteps; k++) {
+      const t = k / nSteps;
+      result.push([
+        poly[i][0] + (poly[j][0] - poly[i][0]) * t,
+        poly[i][1] + (poly[j][1] - poly[i][1]) * t
+      ]);
+    }
+  }
+  return result;
+}
+
+
+// ===== CANVAS STATE =====
+
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
+const DPR = window.devicePixelRatio || 1;
+
+let W = 900, H = 560;
+canvas.width = W * DPR;
+canvas.height = H * DPR;
+canvas.style.width = W + 'px';
+canvas.style.height = H + 'px';
+ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+
+// World coordinates: x ∈ [-6, 6], y ∈ [-6, 6]
+// Robot on right half (x > 0), obstacle on left half (x < 0)
+// Minkowski sum shown below or centered
+
+const VIEW = { xMin: -7, xMax: 7, yMin: -6.5, yMax: 5.5 };
+
+function worldToCanvas(wx, wy) {
+  const cx = (wx - VIEW.xMin) / (VIEW.xMax - VIEW.xMin) * W;
+  const cy = (1 - (wy - VIEW.yMin) / (VIEW.yMax - VIEW.yMin)) * H;
+  return [cx, cy];
+}
+
+function canvasToWorld(cx, cy) {
+  const wx = cx / W * (VIEW.xMax - VIEW.xMin) + VIEW.xMin;
+  const wy = (1 - cy / H) * (VIEW.yMax - VIEW.yMin) + VIEW.yMin;
+  return [wx, wy];
+}
+
+function worldScale(len) {
+  return len / (VIEW.xMax - VIEW.xMin) * W;
+}
+
+// ===== INITIAL POINTS =====
+// Robot points (right half) and obstacle points (left half)
+let robotPts = [
+  [2.885, 1.489], [3.249, 2.6], [2.298, 3.298], [1.348, 2.607], [1.71, 1.489]
+];
+let obstaclePts = [
+  [-1.71, 1.489], [-1.347, 2.607], [-2.298, 3.298], [-3.249, 2.607], [-2.885, 1.489]
+];
+
+let numRobotEdges = 3;
+let numObstacleEdges = 5;
+let showNormals = false;
+let viewMode = 'static'; // 'static' or 'animate'
+let animPos = 0; // 0..1
+let isPlaying = false;
+let animFrameId = null;
+
+// Dragging state
+let dragPoint = null; // { type: 'robot'|'obstacle', index: number }
+let hoveredPoint = null;
+
+// ===== DRAWING =====
+
+function drawArrow(ctx, from, to, headLen) {
+  const [fx, fy] = worldToCanvas(from[0], from[1]);
+  const [tx, ty] = worldToCanvas(to[0], to[1]);
+  const angle = Math.atan2(ty - fy, tx - fx);
+  const hl = headLen || 8;
+
+  ctx.beginPath();
+  ctx.moveTo(fx, fy);
+  ctx.lineTo(tx, ty);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(tx, ty);
+  ctx.lineTo(tx - hl * Math.cos(angle - Math.PI / 6), ty - hl * Math.sin(angle - Math.PI / 6));
+  ctx.lineTo(tx - hl * Math.cos(angle + Math.PI / 6), ty - hl * Math.sin(angle + Math.PI / 6));
+  ctx.closePath();
+  ctx.fill();
+}
+
+function drawPolygonFill(ctx, poly, fillColor) {
+  if (poly.length < 2) return;
+  ctx.beginPath();
+  const [sx, sy] = worldToCanvas(poly[0][0], poly[0][1]);
+  ctx.moveTo(sx, sy);
+  for (let i = 1; i < poly.length; i++) {
+    const [px, py] = worldToCanvas(poly[i][0], poly[i][1]);
+    ctx.lineTo(px, py);
+  }
+  ctx.closePath();
+  ctx.fillStyle = fillColor;
+  ctx.fill();
+}
+
+function drawPolygonStroke(ctx, poly, strokeColor, lw) {
+  if (poly.length < 2) return;
+  ctx.beginPath();
+  const [sx, sy] = worldToCanvas(poly[0][0], poly[0][1]);
+  ctx.moveTo(sx, sy);
+  for (let i = 1; i < poly.length; i++) {
+    const [px, py] = worldToCanvas(poly[i][0], poly[i][1]);
+    ctx.lineTo(px, py);
+  }
+  ctx.closePath();
+  ctx.strokeStyle = strokeColor;
+  ctx.lineWidth = lw || 2;
+  ctx.stroke();
+}
+
+function drawPoints(ctx, poly, color, radius) {
+  for (const p of poly) {
+    const [cx, cy] = worldToCanvas(p[0], p[1]);
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius || 4, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+}
+
+function drawDragHandles(ctx, poly, color, type) {
+  for (let i = 0; i < poly.length; i++) {
+    const [cx, cy] = worldToCanvas(poly[i][0], poly[i][1]);
+    const isHovered = hoveredPoint && hoveredPoint.type === type && hoveredPoint.index === i;
+    const isDragged = dragPoint && dragPoint.type === type && dragPoint.index === i;
+    const r = (isHovered || isDragged) ? 7 : 5;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = (isHovered || isDragged) ? color : '#fff';
+    ctx.fill();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+}
+
+function drawLabel(ctx, text, wx, wy, color, fontSize) {
+  const [cx, cy] = worldToCanvas(wx, wy);
+  ctx.font = `${fontSize || 13}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif`;
+  ctx.fillStyle = color || '#333';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, cx, cy);
+}
+
+function drawSubscriptLabel(ctx, base, sub, wx, wy, color) {
+  const [cx, cy] = worldToCanvas(wx, wy);
+  ctx.fillStyle = color || '#333';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+  const baseW = ctx.measureText(base).width;
+  ctx.fillText(base, cx - 3, cy);
+  ctx.font = '10px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText(sub, cx + baseW / 2 - 1, cy + 4);
+}
+
+// Draw sorted normals dial
+function drawNormalsDial(ctx, robotEdgeNormals, obstEdgeNormals, wcx, wcy, radius) {
+  const [dcx, dcy] = worldToCanvas(wcx, wcy);
+  const r = worldScale(radius);
+
+  // Background circle
+  ctx.beginPath();
+  ctx.arc(dcx, dcy, r, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(255,255,255,0.8)';
+  ctx.fill();
+  ctx.strokeStyle = '#aaa';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+
+  // Draw normal arrows
+  const allNormals = [];
+  robotEdgeNormals.forEach((n, i) => {
+    allNormals.push({ normal: n, source: 'robot', idx: i });
+  });
+  obstEdgeNormals.forEach((n, i) => {
+    allNormals.push({ normal: n, source: 'obstacle', idx: i });
+  });
+  allNormals.sort((a, b) => {
+    const angA = Math.atan2(a.normal[1], a.normal[0]);
+    const angB = Math.atan2(b.normal[1], b.normal[0]);
+    return angA - angB;
+  });
+
+  for (const item of allNormals) {
+    const color = item.source === 'robot' ? '#4285f4' : '#ea4335';
+    const tipX = dcx + item.normal[0] * r * 0.8;
+    const tipY = dcy - item.normal[1] * r * 0.8;
+    const labelX = wcx + item.normal[0] * radius * 1.15;
+    const labelY = wcy + item.normal[1] * radius * 1.15;
+
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = 1.5;
+
+    ctx.beginPath();
+    ctx.moveTo(dcx, dcy);
+    ctx.lineTo(tipX, tipY);
+    ctx.stroke();
+
+    // arrowhead
+    const angle = Math.atan2(dcy - tipY, tipX - dcx);
+    const hl = 5;
+    ctx.beginPath();
+    ctx.moveTo(tipX, tipY);
+    ctx.lineTo(tipX - hl * Math.cos(angle - Math.PI / 6), tipY + hl * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(tipX - hl * Math.cos(angle + Math.PI / 6), tipY + hl * Math.sin(angle + Math.PI / 6));
+    ctx.closePath();
+    ctx.fill();
+
+    // Label
+    const base = item.source === 'robot' ? 'α' : 'β';
+    drawSubscriptLabel(ctx, base, String(item.idx + 1), labelX, labelY, color);
+  }
+
+  drawLabel(ctx, 'sorted normals', wcx, wcy - radius - 0.35, '#666', 11);
+}
+
+// ===== MAIN RENDER =====
+
+function render() {
+  ctx.clearRect(0, 0, W, H);
+
+  // Get active points
+  const rPts = robotPts.slice(0, numRobotEdges);
+  const oPts = obstaclePts.slice(0, numObstacleEdges);
+
+  // Compute convex hulls
+  let robotHull = rPts.length >= 3 ? ensureCCW(grahamScan(rPts)) : rPts.slice();
+  let obstacleHull = oPts.length >= 3 ? ensureCCW(grahamScan(oPts)) : oPts.slice();
+
+  const rc = centroid(robotHull);
+  const oc = centroid(obstacleHull);
+
+  // Compute Minkowski sum: C-obstacle = obstacle ⊕ (-robot)
+  // Negate robot about its centroid for the sum, then shift
+  const negRobot = robotHull.map(p => [-p[0] + 2 * rc[0], -p[1] + 2 * rc[1]]);
+  // Actually reflect about origin for proper Minkowski: -R means negate each vertex
+  const reflectedRobot = robotHull.map(p => [-p[0], -p[1]]);
+  const reflectedHull = reflectedRobot.length >= 3 ? ensureCCW(grahamScan(reflectedRobot)) : reflectedRobot;
+
+  // Compute Minkowski sum of obstacle and -robot
+  const mink = computeMinkowskiSumDirect(obstacleHull, reflectedHull);
+
+  // Offset for display
+  const minkOffset = [0, -3.5]; // display Minkowski below
+
+  if (viewMode === 'static') {
+    // ---- STATIC VIEW ----
+
+    // Draw Minkowski sum (shifted down)
+    if (mink.points.length >= 2) {
+      const shiftedMink = mink.points.map(p => [p[0] + minkOffset[0], p[1] + minkOffset[1]]);
+      drawPolygonFill(ctx, shiftedMink, 'rgba(52, 168, 83, 0.15)');
+
+      // Draw edges color-coded
+      for (let i = 0; i < mink.points.length; i++) {
+        const j = (i + 1) % mink.points.length;
+        const from = [mink.points[i][0] + minkOffset[0], mink.points[i][1] + minkOffset[1]];
+        const to = [mink.points[j][0] + minkOffset[0], mink.points[j][1] + minkOffset[1]];
+        const [fx, fy] = worldToCanvas(from[0], from[1]);
+        const [tx, ty] = worldToCanvas(to[0], to[1]);
+        ctx.beginPath();
+        ctx.moveTo(fx, fy);
+        ctx.lineTo(tx, ty);
+        ctx.strokeStyle = mink.edgeSources[i] === 'obstacle' ? '#ea4335' : '#4285f4';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      drawPoints(ctx, shiftedMink, '#333', 3);
+
+      // Minkowski edge labels
+      if (showNormals) {
+        for (let i = 0; i < mink.points.length; i++) {
+          const j = (i + 1) % mink.points.length;
+          const mp = midpoint(
+            [mink.points[i][0] + minkOffset[0], mink.points[i][1] + minkOffset[1]],
+            [mink.points[j][0] + minkOffset[0], mink.points[j][1] + minkOffset[1]]
+          );
+          const n = outwardNormal(
+            [mink.points[i][0] + minkOffset[0], mink.points[i][1] + minkOffset[1]],
+            [mink.points[j][0] + minkOffset[0], mink.points[j][1] + minkOffset[1]]
+          );
+          const arrowEnd = [mp[0] + n[0] * 0.35, mp[1] + n[1] * 0.35];
+          const color = mink.edgeSources[i] === 'obstacle' ? '#ea4335' : '#4285f4';
+          ctx.strokeStyle = color;
+          ctx.fillStyle = color;
+          ctx.lineWidth = 1.5;
+          drawArrow(ctx, mp, arrowEnd, 6);
+        }
+      }
+
+      drawLabel(ctx, 'Minkowski Sum', minkOffset[0], minkOffset[1] - 2.8, '#333', 13);
+    }
+
+    // Draw obstacle
+    if (obstacleHull.length >= 3) {
+      drawPolygonFill(ctx, obstacleHull, 'rgba(234, 67, 53, 0.18)');
+      drawPolygonStroke(ctx, obstacleHull, '#ea4335', 2);
+    } else if (obstacleHull.length === 2) {
+      const [a, b] = obstacleHull;
+      const [ax, ay] = worldToCanvas(a[0], a[1]);
+      const [bx, by] = worldToCanvas(b[0], b[1]);
+      ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by);
+      ctx.strokeStyle = '#ea4335'; ctx.lineWidth = 2; ctx.stroke();
+    }
+    drawPoints(ctx, obstacleHull, '#ea4335', 3);
+
+    // Draw robot
+    if (robotHull.length >= 3) {
+      drawPolygonFill(ctx, robotHull, 'rgba(66, 133, 244, 0.18)');
+      drawPolygonStroke(ctx, robotHull, '#4285f4', 2);
+    } else if (robotHull.length === 2) {
+      const [a, b] = robotHull;
+      const [ax, ay] = worldToCanvas(a[0], a[1]);
+      const [bx, by] = worldToCanvas(b[0], b[1]);
+      ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by);
+      ctx.strokeStyle = '#4285f4'; ctx.lineWidth = 2; ctx.stroke();
+    }
+    drawPoints(ctx, robotHull, '#4285f4', 3);
+
+    // Centroids
+    const [rcx, rcy] = worldToCanvas(rc[0], rc[1]);
+    ctx.beginPath(); ctx.arc(rcx, rcy, 3, 0, Math.PI * 2);
+    ctx.fillStyle = '#333'; ctx.fill();
+
+    const [ocx, ocy] = worldToCanvas(oc[0], oc[1]);
+    ctx.beginPath(); ctx.arc(ocx, ocy, 3, 0, Math.PI * 2);
+    ctx.fillStyle = '#333'; ctx.fill();
+
+    // Normal arrows on polygons
+    if (showNormals) {
+      // Robot normals (negated for Minkowski convention)
+      if (robotHull.length >= 2) {
+        for (let i = 0; i < robotHull.length; i++) {
+          const j = (i + 1) % robotHull.length;
+          const mp = midpoint(robotHull[i], robotHull[j]);
+          const n = outwardNormal(robotHull[i], robotHull[j]);
+          // Robot normals are negated in Minkowski sum
+          const nn = [-n[0], -n[1]];
+          const arrowEnd = [mp[0] + nn[0] * 0.4, mp[1] + nn[1] * 0.4];
+          ctx.strokeStyle = '#4285f4';
+          ctx.fillStyle = '#4285f4';
+          ctx.lineWidth = 1.5;
+          drawArrow(ctx, mp, arrowEnd, 6);
+
+          // Label
+          const labelPos = [mp[0] + nn[0] * 0.55, mp[1] + nn[1] * 0.55];
+          drawSubscriptLabel(ctx, 'α', String(i + 1), labelPos[0], labelPos[1], '#4285f4');
+        }
+      }
+
+      // Obstacle normals
+      if (obstacleHull.length >= 2) {
+        for (let i = 0; i < obstacleHull.length; i++) {
+          const j = (i + 1) % obstacleHull.length;
+          const mp = midpoint(obstacleHull[i], obstacleHull[j]);
+          const n = outwardNormal(obstacleHull[i], obstacleHull[j]);
+          const arrowEnd = [mp[0] + n[0] * 0.4, mp[1] + n[1] * 0.4];
+          ctx.strokeStyle = '#ea4335';
+          ctx.fillStyle = '#ea4335';
+          ctx.lineWidth = 1.5;
+          drawArrow(ctx, mp, arrowEnd, 6);
+
+          const labelPos = [mp[0] + n[0] * 0.55, mp[1] + n[1] * 0.55];
+          drawSubscriptLabel(ctx, 'β', String(i + 1), labelPos[0], labelPos[1], '#ea4335');
+        }
+      }
+
+      // Sorted normals dial
+      const robotNormals = [];
+      if (robotHull.length >= 2) {
+        for (let i = 0; i < robotHull.length; i++) {
+          const j = (i + 1) % robotHull.length;
+          const n = outwardNormal(robotHull[i], robotHull[j]);
+          robotNormals.push([-n[0], -n[1]]); // negated for robot
+        }
+      }
+      const obstNormals = [];
+      if (obstacleHull.length >= 2) {
+        for (let i = 0; i < obstacleHull.length; i++) {
+          const j = (i + 1) % obstacleHull.length;
+          obstNormals.push(outwardNormal(obstacleHull[i], obstacleHull[j]));
+        }
+      }
+      if (robotNormals.length > 0 || obstNormals.length > 0) {
+        drawNormalsDial(ctx, robotNormals, obstNormals, -5.0, -2.5, 0.9);
+      }
+    }
+
+    // Labels
+    drawLabel(ctx, 'Robot', rc[0], rc[1] - 0.6, '#4285f4', 13);
+    drawLabel(ctx, 'Obstacle', oc[0], oc[1] - 0.6, '#ea4335', 13);
+
+    // Drag handles
+    if (viewMode === 'static') {
+      drawDragHandles(ctx, rPts, '#4285f4', 'robot');
+      drawDragHandles(ctx, oPts, '#ea4335', 'obstacle');
+    }
+
+  } else {
+    // ---- ANIMATE VIEW ----
+
+    // Center the Minkowski sum
+    const minkCenter = centroid(mink.points);
+
+    // Draw Minkowski sum centered
+    if (mink.points.length >= 2) {
+      const shiftedMink = mink.points.map(p => [p[0] - minkCenter[0], p[1] - minkCenter[1]]);
+
+      drawPolygonFill(ctx, shiftedMink, 'rgba(52, 168, 83, 0.12)');
+
+      // Color-coded edges
+      for (let i = 0; i < mink.points.length; i++) {
+        const j = (i + 1) % mink.points.length;
+        const from = [mink.points[i][0] - minkCenter[0], mink.points[i][1] - minkCenter[1]];
+        const to = [mink.points[j][0] - minkCenter[0], mink.points[j][1] - minkCenter[1]];
+        const [fx, fy] = worldToCanvas(from[0], from[1]);
+        const [tx, ty] = worldToCanvas(to[0], to[1]);
+        ctx.beginPath();
+        ctx.moveTo(fx, fy);
+        ctx.lineTo(tx, ty);
+        ctx.strokeStyle = mink.edgeSources[i] === 'obstacle' ? '#ea4335' : '#4285f4';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      drawPoints(ctx, shiftedMink, '#333', 3);
+      drawLabel(ctx, 'Minkowski Sum', 0, 3.5, '#333', 13);
+
+      // Discretize boundary for animation
+      const disc = discretizePolygon(shiftedMink, 0.01);
+      const idx = Math.min(Math.floor(animPos * disc.length), disc.length - 1);
+      const robotPos = disc[idx];
+
+      // Draw obstacle at center
+      const obstShifted = obstacleHull.map(p => [p[0] - oc[0] - minkCenter[0], p[1] - oc[1] - minkCenter[1]]);
+      if (obstShifted.length >= 3) {
+        drawPolygonFill(ctx, obstShifted, 'rgba(234, 67, 53, 0.18)');
+        drawPolygonStroke(ctx, obstShifted, '#ea4335', 2);
+      }
+      drawLabel(ctx, 'Obstacle', -minkCenter[0], -minkCenter[1] - 0.15, '#ea4335', 12);
+
+      // Draw robot at current animation position
+      const robotShifted = robotHull.map(p => [
+        robotPos[0] + p[0] - rc[0],
+        robotPos[1] + p[1] - rc[1]
+      ]);
+      if (robotShifted.length >= 3) {
+        drawPolygonFill(ctx, robotShifted, 'rgba(66, 133, 244, 0.3)');
+        drawPolygonStroke(ctx, robotShifted, '#4285f4', 2);
+      }
+
+      // Reference point marker
+      const [rpx, rpy] = worldToCanvas(robotPos[0], robotPos[1]);
+      ctx.beginPath();
+      ctx.arc(rpx, rpy, 5, 0, Math.PI * 2);
+      ctx.fillStyle = '#ea4335';
+      ctx.fill();
+      ctx.strokeStyle = '#fff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      drawLabel(ctx, 'Robot', robotPos[0] + 0.3, robotPos[1] + 0.3, '#4285f4', 12);
+    }
+  }
+}
+
+// ===== DIRECT MINKOWSKI SUM (proper sorted-edge-normals algorithm) =====
+
+function computeMinkowskiSumDirect(P, Q) {
+  // P and Q must be convex, CCW ordered
+  // Returns Minkowski sum P ⊕ Q
+
+  if (P.length < 2 && Q.length < 2) {
+    if (P.length === 1 && Q.length === 1) {
+      return { points: [[P[0][0] + Q[0][0], P[0][1] + Q[0][1]]], edgeSources: [] };
+    }
+    return { points: [], edgeSources: [] };
+  }
+
+  if (P.length === 1) {
+    const pts = Q.map(q => [q[0] + P[0][0], q[1] + P[0][1]]);
+    return { points: pts, edgeSources: Q.map(() => 'obstacle') };
+  }
+  if (Q.length === 1) {
+    const pts = P.map(p => [p[0] + Q[0][0], p[1] + Q[0][1]]);
+    return { points: pts, edgeSources: P.map(() => 'robot') };
+  }
+
+  // Handle line segments
+  if (P.length === 2 && Q.length === 2) {
+    // Sum of two line segments: parallelogram or degenerate
+    const pts = [
+      [P[0][0] + Q[0][0], P[0][1] + Q[0][1]],
+      [P[1][0] + Q[0][0], P[1][1] + Q[0][1]],
+      [P[1][0] + Q[1][0], P[1][1] + Q[1][1]],
+      [P[0][0] + Q[1][0], P[0][1] + Q[1][1]],
+    ];
+    const hull = ensureCCW(grahamScan(pts));
+    return { points: hull, edgeSources: hull.map(() => 'obstacle') };
+  }
+
+  const pN = P.length;
+  const qN = Q.length;
+
+  // Find bottom-most vertex of each polygon
+  let pi = 0, qi = 0;
+  for (let i = 1; i < pN; i++) {
+    if (P[i][1] < P[pi][1] || (P[i][1] === P[pi][1] && P[i][0] < P[pi][0])) pi = i;
+  }
+  for (let i = 1; i < qN; i++) {
+    if (Q[i][1] < Q[qi][1] || (Q[i][1] === Q[qi][1] && Q[i][0] < Q[qi][0])) qi = i;
+  }
+
+  const result = [];
+  const sources = [];
+  let a = pi, b = qi;
+  const total = pN + qN;
+
+  for (let k = 0; k < total; k++) {
+    result.push([P[a][0] + Q[b][0], P[a][1] + Q[b][1]]);
+    const aNext = (a + 1) % pN;
+    const bNext = (b + 1) % qN;
+    const edgeP = [P[aNext][0] - P[a][0], P[aNext][1] - P[a][1]];
+    const edgeQ = [Q[bNext][0] - Q[b][0], Q[bNext][1] - Q[b][1]];
+    const cross = edgeP[0] * edgeQ[1] - edgeP[1] * edgeQ[0];
+
+    if (cross > 1e-10) {
+      // P edge has smaller angle
+      sources.push('obstacle'); // P is obstacle in our convention
+      a = aNext;
+    } else if (cross < -1e-10) {
+      // Q edge has smaller angle
+      sources.push('robot'); // Q is reflected robot
+      b = bNext;
+    } else {
+      // Parallel edges — advance both
+      sources.push('obstacle');
+      a = aNext;
+      b = bNext;
+    }
+  }
+
+  return { points: result, edgeSources: sources };
+}
+
+
+// ===== INTERACTION =====
+
+function getMouseWorld(e) {
+  const rect = canvas.getBoundingClientRect();
+  const cx = (e.clientX - rect.left) * (W / rect.width);
+  const cy = (e.clientY - rect.top) * (H / rect.height);
+  return canvasToWorld(cx, cy);
+}
+
+function findNearestPoint(wx, wy, threshold) {
+  const thr = threshold || 0.25;
+  let best = null, bestDist = thr;
+
+  if (viewMode !== 'static') return null;
+
+  const rPts2 = robotPts.slice(0, numRobotEdges);
+  for (let i = 0; i < rPts2.length; i++) {
+    const d = dist([wx, wy], rPts2[i]);
+    if (d < bestDist) {
+      bestDist = d;
+      best = { type: 'robot', index: i };
+    }
+  }
+
+  const oPts2 = obstaclePts.slice(0, numObstacleEdges);
+  for (let i = 0; i < oPts2.length; i++) {
+    const d = dist([wx, wy], oPts2[i]);
+    if (d < bestDist) {
+      bestDist = d;
+      best = { type: 'obstacle', index: i };
+    }
+  }
+
+  return best;
+}
+
+canvas.addEventListener('mousedown', (e) => {
+  const [wx, wy] = getMouseWorld(e);
+  const pt = findNearestPoint(wx, wy);
+  if (pt) {
+    dragPoint = pt;
+    canvas.style.cursor = 'grabbing';
+  }
+});
+
+canvas.addEventListener('mousemove', (e) => {
+  const [wx, wy] = getMouseWorld(e);
+
+  if (dragPoint) {
+    if (dragPoint.type === 'robot') {
+      robotPts[dragPoint.index] = [wx, wy];
+    } else {
+      obstaclePts[dragPoint.index] = [wx, wy];
+    }
+    render();
+    return;
+  }
+
+  const pt = findNearestPoint(wx, wy);
+  if (pt) {
+    canvas.style.cursor = 'grab';
+    hoveredPoint = pt;
+  } else {
+    canvas.style.cursor = 'default';
+    hoveredPoint = null;
+  }
+  render();
+});
+
+canvas.addEventListener('mouseup', () => {
+  dragPoint = null;
+  canvas.style.cursor = 'default';
+});
+
+canvas.addEventListener('mouseleave', () => {
+  dragPoint = null;
+  hoveredPoint = null;
+  canvas.style.cursor = 'default';
+  render();
+});
+
+// Touch support
+canvas.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+  const touch = e.touches[0];
+  const rect = canvas.getBoundingClientRect();
+  const cx = (touch.clientX - rect.left) * (W / rect.width);
+  const cy = (touch.clientY - rect.top) * (H / rect.height);
+  const [wx, wy] = canvasToWorld(cx, cy);
+  const pt = findNearestPoint(wx, wy, 0.4);
+  if (pt) dragPoint = pt;
+}, { passive: false });
+
+canvas.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+  if (!dragPoint) return;
+  const touch = e.touches[0];
+  const rect = canvas.getBoundingClientRect();
+  const cx = (touch.clientX - rect.left) * (W / rect.width);
+  const cy = (touch.clientY - rect.top) * (H / rect.height);
+  const [wx, wy] = canvasToWorld(cx, cy);
+  if (dragPoint.type === 'robot') {
+    robotPts[dragPoint.index] = [wx, wy];
+  } else {
+    obstaclePts[dragPoint.index] = [wx, wy];
+  }
+  render();
+}, { passive: false });
+
+canvas.addEventListener('touchend', () => { dragPoint = null; });
+
+
+// ===== CONTROLS =====
+
+document.getElementById('viewMode').addEventListener('change', (e) => {
+  viewMode = e.target.value;
+  document.getElementById('animControls').style.display = viewMode === 'animate' ? 'flex' : 'none';
+  if (viewMode === 'animate') {
+    animPos = 0;
+    document.getElementById('animSlider').value = 0;
+  } else {
+    stopAnim();
+  }
+  render();
+});
+
+document.getElementById('robotEdges').addEventListener('change', (e) => {
+  numRobotEdges = parseInt(e.target.value);
+  render();
+});
+
+document.getElementById('obstacleEdges').addEventListener('change', (e) => {
+  numObstacleEdges = parseInt(e.target.value);
+  render();
+});
+
+document.getElementById('toggleNormals').addEventListener('click', (e) => {
+  showNormals = !showNormals;
+  e.target.classList.toggle('active', showNormals);
+  render();
+});
+
+// Animation
+const animSlider = document.getElementById('animSlider');
+animSlider.addEventListener('input', (e) => {
+  animPos = parseInt(e.target.value) / 1000;
+  render();
+});
+
+function startAnim() {
+  isPlaying = true;
+  document.getElementById('playBtn').textContent = '⏸';
+  function step() {
+    animPos += 0.001;
+    if (animPos > 1) animPos = 0;
+    animSlider.value = Math.floor(animPos * 1000);
+    render();
+    animFrameId = requestAnimationFrame(step);
+  }
+  animFrameId = requestAnimationFrame(step);
+}
+
+function stopAnim() {
+  isPlaying = false;
+  document.getElementById('playBtn').textContent = '▶';
+  if (animFrameId) cancelAnimationFrame(animFrameId);
+  animFrameId = null;
+}
+
+document.getElementById('playBtn').addEventListener('click', () => {
+  if (isPlaying) stopAnim();
+  else startAnim();
+});
+
+// Resize handler
+function handleResize() {
+  const container = canvas.parentElement;
+  W = Math.min(900, container.clientWidth);
+  H = Math.round(W * 560 / 900);
+  canvas.width = W * DPR;
+  canvas.height = H * DPR;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  render();
+}
+
+window.addEventListener('resize', handleResize);
+
+// Initial render
+render();
+</script>
+
+
+</body></html>
